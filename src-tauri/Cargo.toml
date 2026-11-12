@@ -1,1 +1,12 @@
-[package]\nname = "video-hub"\nversion = "0.1.0"\ndescription = "Cross-platform personal video hub"\nauthors = ["Video Hub contributors"]\nedition = "2021"\n\n[build-dependencies]\ntauri-build = { version = "2", features = [] }\n\n[dependencies]\ntauri = { version = "2", features = [] }\n
+[package]
+name = "video-hub"
+version = "0.1.0"
+description = "Cross-platform personal video hub"
+authors = ["Video Hub contributors"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }

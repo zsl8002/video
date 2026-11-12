@@ -1,1 +1,29 @@
-name: CI\non:\n  push:\n    branches: [main, "feature/**"]\n  pull_request:\n  workflow_dispatch:\npermissions:\n  contents: read\njobs:\n  web:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 22\n          cache: npm\n      - run: npm install --no-audit --no-fund\n      - run: npm run typecheck\n      - run: npm run build\n      - uses: actions/upload-artifact@v4\n        with:\n          name: video-hub-web-dist\n          path: dist/\n          if-no-files-found: error\n
+name: CI
+
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    name: Web typecheck and production build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-hub-web-dist
+          path: dist/
+          if-no-files-found: error
