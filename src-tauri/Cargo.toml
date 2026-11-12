@@ -1,0 +1,1 @@
+[package]\nname = "video-hub"\nversion = "0.1.0"\ndescription = "Cross-platform personal video hub"\nauthors = ["Video Hub contributors"]\nedition = "2021"\n\n[build-dependencies]\ntauri-build = { version = "2", features = [] }\n\n[dependencies]\ntauri = { version = "2", features = [] }\n

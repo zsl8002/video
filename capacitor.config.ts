@@ -1,0 +1,1 @@
+import type { CapacitorConfig } from '@capacitor/cli'; const config:CapacitorConfig={appId:'com.zsl8002.videohub',appName:'Video Hub',webDir:'dist'}; export default config;
