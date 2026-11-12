@@ -1,0 +1,1 @@
+export type SourceKind='website'|'media'; export interface VideoSource{id:string;name:string;url:string;kind:SourceKind;category:string;authorized:boolean;favorite:boolean;createdAt:number} export interface WatchEntry{id:string;title:string;url:string;watchedAt:number}
