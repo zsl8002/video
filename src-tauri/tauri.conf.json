@@ -1,1 +1,30 @@
-{"$schema":"https://schema.tauri.app/config/2","productName":"Video Hub","version":"0.1.0","identifier":"com.zsl8002.videohub","build":{"beforeDevCommand":"npm run dev","devUrl":"http://localhost:5173","beforeBuildCommand":"npm run build","frontendDist":"../dist"},"app":{"windows":[{"title":"Video Hub","width":1280,"height":820,"minWidth":800,"minHeight":600}],"security":{"csp":"default-src 'self' asset: http://asset.localhost; img-src 'self' asset: http://asset.localhost data: https:; media-src 'self' blob: data: https: http:; connect-src 'self' ipc: http://ipc.localhost https: http:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:;"}},"bundle":{"active":true,"targets":"all"}}
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Video Hub",
+  "version": "0.2.0",
+  "identifier": "com.zsl8002.videohub",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Video Hub",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 800,
+        "minHeight": 600
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' asset: http://asset.localhost; img-src 'self' asset: http://asset.localhost data: https:; media-src 'self' blob: data: https: http:; connect-src 'self' ipc: http://ipc.localhost https: http:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:;"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all"
+  }
+}
